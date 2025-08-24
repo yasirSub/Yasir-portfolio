@@ -1,0 +1,430 @@
+/* ===== SCROLL ANIMATIONS ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== ANIMATION CLASSES ===== */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-on-scroll.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in-left {
+    animation: fadeInLeft 0.8s ease-out forwards;
+}
+
+.animate-fade-in-right {
+    animation: fadeInRight 0.8s ease-out forwards;
+}
+
+.animate-fade-in-scale {
+    animation: fadeInScale 0.8s ease-out forwards;
+}
+
+.animate-slide-in-bottom {
+    animation: slideInFromBottom 0.8s ease-out forwards;
+}
+
+/* ===== STAGGERED ANIMATIONS ===== */
+.stagger-item {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.stagger-item.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.stagger-item:nth-child(1) { transition-delay: 0.1s; }
+.stagger-item:nth-child(2) { transition-delay: 0.2s; }
+.stagger-item:nth-child(3) { transition-delay: 0.3s; }
+.stagger-item:nth-child(4) { transition-delay: 0.4s; }
+.stagger-item:nth-child(5) { transition-delay: 0.5s; }
+.stagger-item:nth-child(6) { transition-delay: 0.6s; }
+
+/* ===== HOVER ANIMATIONS ===== */
+.hover-lift {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+}
+
+.hover-scale {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.hover-glow {
+    transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 30px rgba(37, 99, 235, 0.3);
+}
+
+/* ===== TEXT ANIMATIONS ===== */
+.typing-animation {
+    overflow: hidden;
+    border-right: 2px solid var(--primary-color);
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--primary-color); }
+}
+
+/* ===== PARTICLE ANIMATIONS ===== */
+.particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    animation: particle-float 6s infinite linear;
+}
+
+@keyframes particle-float {
+    0% {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100px) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* ===== LOADING ANIMATIONS ===== */
+.loading-dots {
+    display: inline-block;
+}
+
+.loading-dots::after {
+    content: '';
+    animation: loading-dots 1.5s infinite;
+}
+
+@keyframes loading-dots {
+    0%, 20% { content: ''; }
+    40% { content: '.'; }
+    60% { content: '..'; }
+    80%, 100% { content: '...'; }
+}
+
+/* ===== SKILL BAR ANIMATIONS ===== */
+.skill-bar-animate {
+    animation: skillBarFill 2s ease-out forwards;
+}
+
+@keyframes skillBarFill {
+    from { width: 0%; }
+    to { width: var(--skill-level); }
+}
+
+/* ===== PROJECT CARD ANIMATIONS ===== */
+.project-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover {
+    transform: translateY(-10px) scale(1.02);
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-card:hover .project-links {
+    animation: projectLinksIn 0.3s ease-out forwards;
+}
+
+@keyframes projectLinksIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ===== TIMELINE ANIMATIONS ===== */
+.timeline-item {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-item.animated {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.timeline-item:nth-child(even) {
+    transform: translateX(50px);
+}
+
+.timeline-item:nth-child(even).animated {
+    transform: translateX(0);
+}
+
+/* ===== NAVIGATION ANIMATIONS ===== */
+.nav-link {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* ===== BUTTON ANIMATIONS ===== */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn:hover::before {
+    left: 100%;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* ===== ICON ANIMATIONS ===== */
+.icon-bounce {
+    animation: iconBounce 2s infinite;
+}
+
+@keyframes iconBounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.icon-rotate {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-rotate:hover {
+    transform: rotate(360deg);
+}
+
+.icon-pulse {
+    animation: iconPulse 2s infinite;
+}
+
+@keyframes iconPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* ===== SCROLL TRIGGERED ANIMATIONS ===== */
+.scroll-trigger {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scroll-trigger.triggered {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== PARALLAX EFFECTS ===== */
+.parallax-element {
+    transition: transform 0.1s ease-out;
+}
+
+/* ===== MOBILE MENU ANIMATIONS ===== */
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.nav-menu.active {
+    animation: slideDown 0.3s ease-out forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== THEME TRANSITION ANIMATIONS ===== */
+.theme-transition {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ===== CUSTOM CURSOR ANIMATIONS ===== */
+.custom-cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.1s ease;
+    mix-blend-mode: difference;
+}
+
+.custom-cursor.hover {
+    transform: scale(2);
+}
+
+/* ===== RESPONSIVE ANIMATIONS ===== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .animate-on-scroll {
+        transition-duration: 0.5s;
+    }
+    
+    .stagger-item {
+        transition-delay: 0.1s !important;
+    }
+}

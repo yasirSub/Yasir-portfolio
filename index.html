@@ -1,409 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yasir Subhani - Web & Android App Developer</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Modern CSS Files -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    
+    <!-- Meta Theme Color -->
+    <meta name="theme-color" content="#2563eb">
+    
+    <!-- Configuration -->
+    <script src="js/config.js"></script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <span>Yasir Subhani</span>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <p>Loading Portfolio...</p>
         </div>
-    </nav>
+    </div>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">
-                    <span class="gradient-text">Yasir Subhani</span>
-                </h1>
-                <p class="hero-subtitle">
-                    Web & Android App Developer with expertise in Flutter, AI automation, and full-stack development
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="floating-card">
-                    <div class="card-icon">
-                        <i class="fas fa-mobile-alt"></i>
-                    </div>
-                </div>
-                <div class="floating-card delay-1">
-                    <div class="card-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                </div>
-                <div class="floating-card delay-2">
-                    <div class="card-icon">
-                        <i class="fas fa-code"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
-        </div>
-    </section>
+    <!-- Error Container (hidden by default) -->
+    <div id="error-container" class="error-container" style="display: none;"></div>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">Get to know me better</p>
-            </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Web & Android App Developer</h3>
-                    <p>
-                        I am a passionate Web & Android App Developer with expertise in Flutter, AI automation, 
-                        and full-stack development. I excel in integrating AI tools, optimizing databases, 
-                        and building scalable applications.
-                    </p>
-                    <p>
-                        With a solid foundation in programming languages and a growing portfolio of applications 
-                        and projects, I am passionate about creating efficient and user-friendly digital solutions 
-                        that make a real impact.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">4+</span>
-                            <span class="stat-label">Years Experience</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">15+</span>
-                            <span class="stat-label">Projects Completed</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Client Satisfaction</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <div class="image-placeholder">
-                        <i class="fas fa-user"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Component Containers -->
+    <div id="header"></div>
+    <div id="hero"></div>
+    <div id="about"></div>
+    <div id="experience"></div>
+    <div id="skills"></div>
+    <div id="projects"></div>
+    <div id="education"></div>
+    <div id="achievements"></div>
+    <div id="contact"></div>
+    <div id="footer"></div>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Skills & Expertise</h2>
-                <p class="section-subtitle">Technologies I work with</p>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Mobile Development</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-android"></i>
-                            </div>
-                            <span>Android</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-mobile-alt"></i>
-                            </div>
-                            <span>Flutter</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <span>Dart</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-java"></i>
-                            </div>
-                            <span>Java</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Web Development</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-html5"></i>
-                            </div>
-                            <span>HTML5</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-js"></i>
-                            </div>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-php"></i>
-                            </div>
-                            <span>PHP</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <span>SQL</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>AI & Tools</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-python"></i>
-                            </div>
-                            <span>Python</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fas fa-robot"></i>
-                            </div>
-                            <span>AI Automation</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-figma"></i>
-                            </div>
-                            <span>Figma</span>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-icon">
-                                <i class="fab fa-wordpress"></i>
-                            </div>
-                            <span>WordPress</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Some of my recent work</p>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                                <a href="#" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="image-placeholder">
-                            <i class="fas fa-sync-alt"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>WeSync</h3>
-                        <p>A productivity and relationship management app designed to optimize daily tasks and personal relationships with AI-powered features.</p>
-                        <div class="project-tags">
-                            <span class="tag">Flutter</span>
-                            <span class="tag">AI</span>
-                            <span class="tag">Dart</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                                <a href="#" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="image-placeholder">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>TradeShield</h3>
-                        <p>A trading and money management app aimed at enhancing trading efficiency and financial insights with AI analytics.</p>
-                        <div class="project-tags">
-                            <span class="tag">Flutter</span>
-                            <span class="tag">AI Analytics</span>
-                            <span class="tag">Financial</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <div class="project-overlay">
-                            <div class="project-links">
-                                <a href="#" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                </a>
-                                <a href="#" class="project-link">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="image-placeholder">
-                            <i class="fab fa-whatsapp"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>AI WhatsApp Auto-Reply Bot</h3>
-                        <p>An AI auto-reply bot designed for WhatsApp to enhance business communication using Ollama & AI models.</p>
-                        <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">AI</span>
-                            <span class="tag">WhatsApp API</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Get In Touch</h2>
-                <p class="section-subtitle">Let's work together</p>
-            </div>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Email</h4>
-                            <p>yasir.subhani123@gmail.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-phone"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Phone</h4>
-                            <p>+91 8271819813</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>Location</h4>
-                            <p>Kolkata, India</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fab fa-linkedin"></i>
-                        </div>
-                        <div class="contact-details">
-                            <h4>LinkedIn</h4>
-                            <p>linkedin.com/in/yasirsubhani</p>
-                        </div>
-                    </div>
-                </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <span>Yasir Subhani</span>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com/yasirSub" class="social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/yasirsubhani" class="social-link">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="mailto:yasir.subhani123@gmail.com" class="social-link">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                    <a href="tel:+918271819813" class="social-link">
-                        <i class="fas fa-phone"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Yasir Subhani. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+    <!-- Modern JavaScript Files -->
+    <script src="js/components.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/theme.js"></script>
 </body>
 </html>
+
+

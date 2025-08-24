@@ -1,39 +1,55 @@
 @echo off
-echo Deploying Portfolio to GitHub...
+echo Starting Portfolio Deployment...
 echo.
 
-echo Step 1: Initializing Git...
+REM Check if Git is installed
+git --version >nul 2>&1
+if %errorlevel% neq 0 (
+    echo ERROR: Git is not installed or not in PATH
+    echo Please install Git from: https://git-scm.com/
+    pause
+    exit /b 1
+)
+
+echo Git found. Starting deployment...
+echo.
+
+REM Initialize Git repository
+echo 1. Initializing Git repository...
 git init
 
-echo Step 2: Adding files...
+REM Add all files
+echo 2. Adding files...
 git add .
 
-echo Step 3: Committing changes...
-git commit -m "Deploy beautiful portfolio website"
+REM Commit changes
+echo 3. Committing changes...
+git commit -m "Portfolio website - Yasir Subhani"
 
-echo Step 4: Setting main branch...
+REM Set main branch
+echo 4. Setting main branch...
 git branch -M main
 
-echo Step 5: Adding remote origin...
+REM Add remote origin
+echo 5. Adding GitHub remote...
 git remote add origin https://github.com/yasirSub/Yasir-portfolio.git
 
-echo Step 6: Pushing to GitHub...
+REM Push to GitHub
+echo 6. Pushing to GitHub...
 git push -u origin main
 
 echo.
-echo ========================================
-echo DEPLOYMENT COMPLETE!
-echo ========================================
+echo Deployment completed!
 echo.
-echo Your portfolio is now on GitHub!
-echo.
-echo Next: Enable GitHub Pages:
+echo Next steps:
 echo 1. Go to: https://github.com/yasirSub/Yasir-portfolio
-echo 2. Click Settings > Pages
-echo 3. Select 'main' branch
-echo 4. Save
+echo 2. Click Settings tab
+echo 3. Scroll to Pages section
+echo 4. Select "Deploy from a branch"
+echo 5. Choose "main" branch and "/ (root)" folder
+echo 6. Click Save
 echo.
-echo Your site will be live at:
-echo https://yasirsub.github.io/Yasir-portfolio/
+echo Your portfolio will be live at:
+echo https://yasirsubhani.github.io/Yasir-portfolio/
 echo.
 pause
