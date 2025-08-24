@@ -1,52 +1,29 @@
-<!-- Terminal Header -->
-<div class="terminal-header">
-    <div class="terminal-controls">
-        <span class="control close"></span>
-        <span class="control minimize"></span>
-        <span class="control maximize"></span>
-    </div>
-    <div class="terminal-title">
-        <i class="fas fa-terminal"></i>
-        <span>yasir@portfolio:~$</span>
-    </div>
-</div>
-
-<!-- Navigation -->
-<nav class="navbar">
-    <div class="nav-container">
+<!-- Header with Navigation -->
+<header class="navbar">
+    <div class="container">
         <div class="nav-logo">
-            <i class="fas fa-code"></i>
-            <span>Yasir Subhani</span>
+            <a href="#" class="brand-link">
+                <i class="fas fa-code"></i>
+                <span>Yasir Subhani</span>
+            </a>
         </div>
-        <ul class="nav-menu">
-            <li class="nav-item">
-                <a href="#home" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-                <a href="#about" class="nav-link">About</a>
-            </li>
-            <li class="nav-item">
-                <a href="#experience" class="nav-link">Experience</a>
-            </li>
-            <li class="nav-item">
-                <a href="#skills" class="nav-link">Skills</a>
-            </li>
-            <li class="nav-item">
-                <a href="#projects" class="nav-link">Projects</a>
-            </li>
-            <li class="nav-item">
-                <a href="#contact" class="nav-link">Contact</a>
-            </li>
-        </ul>
+        
+        <!-- Navigation Menu -->
+        <nav class="nav-menu">
+            <a href="#hero" class="nav-link">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#education" class="nav-link">Education</a>
+            <a href="#achievements" class="nav-link">Achievements</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+        
         <div class="nav-actions">
-            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
-                <i class="fas fa-moon"></i>
+            <button class="theme-toggle" id="theme-toggle">
+                <i class="fas fa-moon" id="theme-icon"></i>
             </button>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
         </div>
     </div>
-</nav>
+</header>

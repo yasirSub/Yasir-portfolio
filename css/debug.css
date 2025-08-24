@@ -1,0 +1,92 @@
+/* Debug CSS - Ensures components are visible */
+#header, #hero, #about, #experience, #skills, #projects, #education, #achievements, #contact, #footer {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    min-height: 100px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    padding: 20px;
+    background: #f9f9f9;
+}
+
+/* Loading screen styles */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #0f172a;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease;
+}
+
+.loading-content {
+    text-align: center;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid #2563eb;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Debug info styles */
+#debug-info {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: rgba(0,0,0,0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    z-index: 9999;
+    font-family: monospace;
+}
+
+/* Error component styles */
+.error-component {
+    padding: 20px;
+    text-align: center;
+    color: #dc2626;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    margin: 20px 0;
+}
+
+/* Basic button styles */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.btn-secondary {
+    background: #6b7280;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}

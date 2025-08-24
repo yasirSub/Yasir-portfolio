@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yasir Subhani - Web & Android App Developer</title>
+    <title>Yasir Subhani - Full-Stack Developer</title>
     
-    <!-- Modern CSS Files -->
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/components.css">
+    <!-- Modern CSS -->
+    <link rel="stylesheet" href="css/simple.css">
     <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
     
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -21,10 +19,15 @@
     <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
     
     <!-- Meta Theme Color -->
-    <meta name="theme-color" content="#2563eb">
+    <meta name="theme-color" content="#6366f1">
     
-    <!-- Configuration -->
-    <script src="js/config.js"></script>
+    <!-- Meta Description -->
+    <meta name="description" content="Yasir Subhani - Full-Stack Developer specializing in Flutter, AI automation, and web development. View portfolio and get in touch.">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Yasir Subhani - Full-Stack Developer">
+    <meta property="og:description" content="Portfolio showcasing Flutter, AI, and web development projects">
+    <meta property="og:type" content="website">
 </head>
 <body>
     <!-- Loading Screen -->
@@ -32,28 +35,49 @@
         <div class="loading-content">
             <div class="loading-spinner"></div>
             <p>Loading Portfolio...</p>
+            <div id="loading-status">Initializing...</div>
         </div>
     </div>
 
-    <!-- Error Container (hidden by default) -->
-    <div id="error-container" class="error-container" style="display: none;"></div>
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress" class="scroll-progress"></div>
 
     <!-- Component Containers -->
-    <div id="header"></div>
-    <div id="hero"></div>
-    <div id="about"></div>
-    <div id="experience"></div>
-    <div id="skills"></div>
-    <div id="projects"></div>
-    <div id="education"></div>
-    <div id="achievements"></div>
-    <div id="contact"></div>
-    <div id="footer"></div>
+    <div id="header" style="display: none;"></div>
+    <div id="hero" style="display: none;"></div>
+    <div id="about" style="display: none;"></div>
+    <div id="experience" style="display: none;"></div>
+    <div id="skills" style="display: none;"></div>
+    <div id="projects" style="display: none;"></div>
+    <div id="education" style="display: none;"></div>
+    <div id="achievements" style="display: none;"></div>
+    <div id="contact" style="display: none;"></div>
+    <div id="footer" style="display: none;"></div>
 
-    <!-- Modern JavaScript Files -->
-    <script src="js/components.js"></script>
+    <!-- Floating Action Buttons -->
+    <div id="floating-buttons" class="floating-buttons">
+        <!-- Scroll to Top Button -->
+        <button id="scroll-to-top" class="floating-btn scroll-to-top-btn" title="Scroll to Top">
+            <i class="fas fa-chevron-up"></i>
+        </button>
+        
+        <!-- WhatsApp Button -->
+        <a href="https://wa.me/918271819813" target="_blank" class="floating-btn whatsapp-btn" title="Connect on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/components-simple.js"></script>
     <script src="js/main.js"></script>
     <script src="js/theme.js"></script>
+    
+    <script>
+        // Initialize portfolio when components are loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Portfolio page loaded');
+        });
+    </script>
 </body>
 </html>
 

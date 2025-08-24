@@ -1,40 +1,117 @@
 <!-- Hero Section -->
-<section id="home" class="hero">
+<section class="hero">
+    <!-- Background Elements -->
+    <div class="hero-bg-elements">
+        <div class="bg-circle bg-circle-1"></div>
+        <div class="bg-circle bg-circle-2"></div>
+        <div class="bg-circle bg-circle-3"></div>
+        <div class="bg-grid"></div>
+    </div>
+    
     <div class="hero-container">
+        <!-- Hero Content -->
         <div class="hero-content">
+            <div class="hero-badge">
+                <i class="fas fa-code"></i>
+                <span>Full-Stack Developer & AI Specialist</span>
+            </div>
+            
             <h1 class="hero-title">
-                <span class="gradient-text typing-animation">Yasir Subhani</span>
+                Hi, I'm <span class="highlight">Yasir Subhani</span>
+                <br>
+                <span class="title-line-2">Building the Future</span>
+                <br>
+                <span class="title-line-3">with Code & AI</span>
             </h1>
+            
             <p class="hero-subtitle">
-                Web & Android App Developer with expertise in Flutter, AI automation, and full-stack development
+                Transforming ideas into powerful digital experiences through 
+                <span class="highlight">Flutter</span>, 
+                <span class="highlight">AI automation</span>, and 
+                <span class="highlight">full-stack development</span>
             </p>
+            
+            <div class="hero-description">
+                <p>
+                    I specialize in creating seamless mobile apps, intelligent web solutions, 
+                    and AI-powered systems that drive business growth and user engagement.
+                </p>
+            </div>
+            
             <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
-                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                <a href="#projects" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i>
+                    View My Work
+                </a>
+                <a href="#contact" class="btn btn-secondary">
+                    <i class="fas fa-paper-plane"></i>
+                    Let's Talk
+                </a>
+            </div>
+            
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="50">0</div>
+                    <div class="stat-label">Projects Completed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="5">0</div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="100">0</div>
+                    <div class="stat-label">Happy Clients</div>
+                </div>
             </div>
         </div>
+        
+        <!-- Hero Visual -->
         <div class="hero-visual">
-            <div class="code-editor">
+            <div class="floating-card code-editor">
                 <div class="editor-header">
-                    <span class="file-name">portfolio.js</span>
+                    <div class="editor-controls">
+                        <div class="control close"></div>
+                        <div class="control minimize"></div>
+                        <div class="control maximize"></div>
+                    </div>
+                    <div class="file-name">portfolio.dart</div>
                 </div>
                 <div class="editor-content">
-                    <pre><code>class Developer {
-  constructor() {
-    this.name = "Yasir Subhani";
-    this.role = "Full-Stack Developer";
-    this.skills = ["Flutter", "AI", "Web"];
-  }
+                    <pre><code><span class="keyword">class</span> <span class="class-name">Portfolio</span> {
+  <span class="keyword">final</span> <span class="type">String</span> <span class="method">name</span> = <span class="string">'Yasir Subhani'</span>;
+  <span class="keyword">final</span> <span class="type">List</span>&lt;<span class="type">String</span>&gt; <span class="method">skills</span> = [
+    <span class="string">'Flutter'</span>,
+    <span class="string">'AI/ML'</span>,
+    <span class="string">'Full-Stack'</span>
+  ];
   
-  build() {
-    return "Amazing Apps";
+  <span class="type">Future</span>&lt;<span class="type">void</span>&gt; <span class="method">buildAmazingApps</span>() <span class="keyword">async</span> {
+    <span class="keyword">await</span> <span class="method">createInnovation</span>();
   }
 }</code></pre>
                 </div>
             </div>
+            
+            <div class="tech-stack">
+                <div class="tech-icon" title="Flutter">
+                    <i class="fab fa-android"></i>
+                </div>
+                <div class="tech-icon" title="AI/ML">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <div class="tech-icon" title="Web Dev">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <div class="tech-icon" title="Database">
+                    <i class="fas fa-database"></i>
+                </div>
+            </div>
         </div>
     </div>
+    
+    <!-- Scroll Indicator -->
     <div class="scroll-indicator">
+        <div class="scroll-text">Scroll to explore</div>
         <div class="scroll-arrow"></div>
     </div>
 </section>
