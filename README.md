@@ -1,129 +1,114 @@
-# Beautiful Portfolio Website
+# 🚀 Yasir Subhani - Portfolio Website
 
-A modern, responsive portfolio website built with HTML, CSS, and JavaScript. Features a clean design, smooth animations, and mobile-first responsive layout.
+A modern, responsive portfolio website built with modular components and clean architecture.
 
 ## ✨ Features
 
-- **Modern Design**: Clean, professional layout with gradient accents
-- **Responsive**: Mobile-first design that works on all devices
-- **Smooth Animations**: CSS animations and JavaScript interactions
-- **Interactive Elements**: Hover effects, scroll animations, and smooth transitions
-- **Contact Form**: Functional contact form with validation
-- **SEO Optimized**: Semantic HTML structure and meta tags
-- **Fast Loading**: Optimized CSS and minimal JavaScript
+- **Modular Design** - Each section in separate, maintainable files
+- **Modern UI/UX** - Professional developer-themed design
+- **Dark/Light Theme** - Automatic theme switching with manual toggle
+- **Responsive Layout** - Mobile-first design that works on all devices
+- **Performance Optimized** - Fast loading with modern CSS and JavaScript
+- **Easy Customization** - Simple configuration file for personalization
 
-## 🚀 Live Demo
+## 🏗️ Project Structure
 
-[View Live Portfolio](https://yasirsub.github.io/Yasir-portfolio/)
+```
+portfilo/
+├── components/          # HTML components for each section
+│   ├── header.html     # Navigation and terminal header
+│   ├── hero.html       # Hero section with code editor
+│   ├── about.html      # About me section
+│   ├── experience.html # Professional experience timeline
+│   ├── skills.html     # Skills and expertise grid
+│   ├── projects.html   # Featured projects showcase
+│   ├── education.html  # Academic background
+│   ├── achievements.html # Notable accomplishments
+│   ├── contact.html    # Contact form and information
+│   └── footer.html     # Footer with social links
+├── css/                # Organized stylesheets
+│   ├── main.css        # Global styles and variables
+│   ├── components.css  # Component-specific styles
+│   ├── animations.css  # CSS animations and keyframes
+│   └── responsive.css  # Mobile-first responsive design
+├── js/                 # JavaScript modules
+│   ├── config.js       # Configuration and customization
+│   ├── components.js   # Dynamic component loader
+│   ├── main.js         # Core application logic
+│   └── theme.js        # Theme management system
+├── assets/             # Images and icons
+│   ├── icons/          # Favicon and icon files
+│   └── images/         # Project and profile images
+├── .github/            # GitHub Actions workflows
+├── index.html          # Main HTML file (clean and minimal)
+├── deploy.ps1          # PowerShell deployment script
+└── README.md           # This file
+```
+
+## 🚀 Quick Start
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yasirSub/Yasir-portfolio.git
+   cd Yasir-portfolio
+   ```
+
+2. **Open in browser**
+   - Simply open `index.html` in your web browser
+   - Or use a local server for development
+
+3. **Customize**
+   - Edit `js/config.js` for personal information
+   - Modify component files in `components/` folder
+   - Update styles in `css/` folder
+
+## 🎨 Customization
+
+### Personal Information
+Edit `js/config.js` to update:
+- Name, title, contact details
+- Social media links
+- Theme preferences
+- Animation settings
+
+### Adding New Sections
+1. Create new HTML file in `components/` folder
+2. Add component to `js/components.js` loader
+3. Add container div in `index.html`
+4. Style in appropriate CSS file
+
+### Theme Customization
+- Colors: Edit CSS variables in `css/main.css`
+- Animations: Modify `css/animations.css`
+- Layout: Adjust `css/responsive.css`
+
+## 🌐 Deployment
+
+### GitHub Pages (Recommended)
+1. Push to GitHub repository
+2. Enable GitHub Pages in repository settings
+3. Select source as "GitHub Actions"
+4. Automatic deployment on every push
+
+### Manual Deployment
+```bash
+# Using PowerShell
+./deploy.ps1
+
+# Or manually
+git add .
+git commit -m "Update portfolio"
+git push origin main
+```
 
 ## 🛠️ Technologies Used
 
-- **HTML5**: Semantic markup
-- **CSS3**: Modern styling with Flexbox and Grid
-- **JavaScript (ES6+)**: Interactive functionality
-- **Font Awesome**: Icons
-- **Google Fonts**: Inter font family
-
-## 📁 Project Structure
-
-```
-portfolio/
-├── index.html          # Main HTML file
-├── styles.css          # CSS styles
-├── script.js           # JavaScript functionality
-└── README.md           # Project documentation
-```
-
-## 🎨 Sections
-
-1. **Hero Section**: Eye-catching introduction with call-to-action buttons
-2. **About Section**: Personal information and statistics
-3. **Skills Section**: Technical skills and expertise
-4. **Projects Section**: Portfolio of work with hover effects
-5. **Contact Section**: Contact form and information
-6. **Footer**: Social links and copyright
-
-## 📱 Responsive Design
-
-- **Desktop**: Full layout with side-by-side sections
-- **Tablet**: Optimized for medium screens
-- **Mobile**: Mobile-first design with hamburger navigation
-
-## 🚀 Deployment
-
-### Option 1: GitHub Pages (Recommended)
-
-1. **Push to GitHub**:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial portfolio commit"
-   git branch -M main
-   git remote add origin https://github.com/yasirSub/Yasir-portfolio.git
-   git push -u origin main
-   ```
-
-2. **Enable GitHub Pages**:
-   - Go to your repository settings
-   - Scroll down to "Pages" section
-   - Select "main" branch as source
-   - Save the settings
-
-3. **Your portfolio will be available at**:
-   `https://yasirsub.github.io/Yasir-portfolio/`
-
-### Option 2: Netlify
-
-1. **Drag and Drop**:
-   - Go to [netlify.com](https://netlify.com)
-   - Drag your project folder to the deploy area
-   - Your site will be live instantly
-
-2. **Git Integration**:
-   - Connect your GitHub repository
-   - Automatic deployments on every push
-
-### Option 3: Vercel
-
-1. **Install Vercel CLI**:
-   ```bash
-   npm i -g vercel
-   ```
-
-2. **Deploy**:
-   ```bash
-   vercel
-   ```
-
-## 🔧 Customization
-
-### Personal Information
-- Update the content in `index.html`
-- Modify the about section text
-- Change contact information
-- Update project details
-
-### Styling
-- Modify colors in `styles.css`
-- Change the gradient colors in `.gradient-text` class
-- Adjust spacing and typography
-- Customize animations
-
-### Functionality
-- Modify form handling in `script.js`
-- Add new sections or features
-- Customize scroll animations
-- Add more interactive elements
-
-## 🎯 Key Features
-
-- **Smooth Scrolling**: Navigation links scroll smoothly to sections
-- **Scroll Animations**: Elements animate as they come into view
-- **Mobile Navigation**: Hamburger menu for mobile devices
-- **Form Validation**: Contact form with input validation
-- **Hover Effects**: Interactive project cards and skill items
-- **Parallax Effects**: Subtle parallax on floating elements
-- **Loading Animations**: Smooth page load transitions
+- **HTML5** - Semantic markup
+- **CSS3** - Modern styling with custom properties
+- **JavaScript ES6+** - Modular, modern JavaScript
+- **Font Awesome** - Professional icons
+- **Google Fonts** - Typography (JetBrains Mono, Inter)
+- **GitHub Actions** - Automated deployment
 
 ## 📱 Browser Support
 
@@ -131,7 +116,7 @@ portfolio/
 - Firefox (latest)
 - Safari (latest)
 - Edge (latest)
-- Mobile browsers
+- Mobile browsers (iOS Safari, Chrome Mobile)
 
 ## 🤝 Contributing
 
@@ -145,20 +130,12 @@ portfolio/
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## 📞 Support
+## 📞 Contact
 
-If you have any questions or need help with deployment, feel free to:
-- Open an issue on GitHub
-- Contact me through the portfolio contact form
-
-## 🔄 Updates
-
-- **v1.0.0**: Initial release with core features
-- Responsive design
-- Smooth animations
-- Contact form functionality
-- Mobile navigation
+- **Email**: yasir.subhani123@gmail.com
+- **LinkedIn**: [linkedin.com/in/yasirsubhani](https://linkedin.com/in/yasirsubhani)
+- **GitHub**: [github.com/yasirSub](https://github.com/yasirSub)
 
 ---
 
-**Built with ❤️ for showcasing creative work and skills**
+⭐ **Star this repository if you found it helpful!**
